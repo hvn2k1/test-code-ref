@@ -29,6 +29,6 @@ func main() {
 		"x1",
 		nil,
 	)
-	showNewFeature := client.BoolVariation(ctx, testUser, "my-test-flag-1", false)
+	showNewFeature := client.StringVariation(ctx, testUser, "feature-go-server-e2e-string", "value-2")
 	fmt.Printf("Show new feature: %v\n", showNewFeature)
 }
