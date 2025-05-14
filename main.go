@@ -30,8 +30,6 @@ func main() {
 		nil,
 	)
 	showNewFeature := client.StringVariation(ctx, testUser, "fcm-feature", "value-2")
-	fmt.Printf("Show new feature value: %v\n", showNewFeature)
-
 	if showNewFeature == "value-1" {
 		fmt.Println("New feature is enabled")
 	} else {
