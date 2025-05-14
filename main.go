@@ -35,4 +35,11 @@ func main() {
 	} else {
 		fmt.Println("New feature is being tested")
 	}
+
+	showNewFeature2 := client.StringVariation(ctx, testUser, "test-211067", "value-2")
+	if showNewFeature2 == "value-1" {
+		fmt.Println("New feature is enabled")
+	} else {
+		fmt.Println("New feature is being tested")
+	}
 }
