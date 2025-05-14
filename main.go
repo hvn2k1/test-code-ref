@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"fmt"
 	"log"
 	"time"
 
@@ -25,13 +26,9 @@ func main() {
 	}
 
 	testUser := user.NewUser(
-		"END_USER_ID",
+		"x1",
 		nil,
 	)
-	showNewFeature := client.BoolVariation(ctx, testUser, "feature-go-server-e2e-string", false)
-	if showNewFeature {
-		// The Application code to show the new feature
-	} else {
-		// The code to run when the feature is off
-	}
+	showNewFeature := client.BoolVariation(ctx, testUser, "my-test-flag-1", false)
+	fmt.Printf("Show new feature: %v\n", showNewFeature)
 }
