@@ -29,7 +29,7 @@ func main() {
 		"x1",
 		nil,
 	)
-	showNewFeature := client.StringVariation(ctx, testUser, "feature-go-server-e2e-string", "value-2")
+	showNewFeature := client.StringVariation(ctx, testUser, "fcm-feature", "value-2")
 	fmt.Printf("Show new feature: %v\n", showNewFeature)
 
 	if showNewFeature == "value-1" {
