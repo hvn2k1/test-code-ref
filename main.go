@@ -31,4 +31,10 @@ func main() {
 	)
 	showNewFeature := client.StringVariation(ctx, testUser, "feature-go-server-e2e-string", "value-2")
 	fmt.Printf("Show new feature: %v\n", showNewFeature)
+
+	if showNewFeature == "value-1" {
+		fmt.Println("New feature is enabled")
+	} else {
+		fmt.Println("New feature is being tested")
+	}
 }
